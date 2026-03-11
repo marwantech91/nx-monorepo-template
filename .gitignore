@@ -1,0 +1,45 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Build outputs
+dist
+build
+.next
+.expo
+*.tsbuildinfo
+
+# Nx
+.nx
+.nx/cache
+
+# Testing
+coverage
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mobile
+ios/Pods
+android/.gradle
+android/app/build
+*.jks
+*.keystore
