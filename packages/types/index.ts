@@ -33,3 +33,23 @@ export interface AuthTokens {
   refreshToken: string;
   expiresIn: number;
 }
+
+export interface ApiError {
+  code: string;
+  message: string;
+  statusCode: number;
+  details?: Record<string, unknown>;
+}
+
+export type SortDirection = 'asc' | 'desc';
+
+export interface SortOptions {
+  field: string;
+  direction: SortDirection;
+}
+
+export interface FilterOptions {
+  field: string;
+  operator: 'eq' | 'ne' | 'gt' | 'gte' | 'lt' | 'lte' | 'in' | 'contains';
+  value: unknown;
+}
