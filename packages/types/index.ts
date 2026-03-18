@@ -53,3 +53,11 @@ export interface FilterOptions {
   operator: 'eq' | 'ne' | 'gt' | 'gte' | 'lt' | 'lte' | 'in' | 'contains';
   value: unknown;
 }
+
+export interface QueryOptions {
+  page?: number;
+  pageSize?: number;
+  sort?: SortOptions;
+  filters?: FilterOptions[];
+  search?: string;
+}
