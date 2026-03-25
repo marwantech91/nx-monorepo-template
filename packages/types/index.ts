@@ -61,3 +61,16 @@ export interface QueryOptions {
   filters?: FilterOptions[];
   search?: string;
 }
+
+/** Build a type-safe PaginatedResponse from a data array and total count */
+export function paginate<T>(items: T[], page: number, pageSize: number, total: number): PaginatedResponse<T> {
+  return {
+    data: items,
+    pagination: {
+      page,
+      pageSize,
+      total,
+      totalPages: Math.ceil(total / pageSize),
+    },
+  };
+}
