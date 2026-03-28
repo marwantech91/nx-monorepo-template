@@ -62,6 +62,15 @@ export interface QueryOptions {
   search?: string;
 }
 
+export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+
+export interface RequestConfig {
+  method: HttpMethod;
+  path: string;
+  headers?: Record<string, string>;
+  params?: QueryOptions;
+}
+
 /** Build a type-safe PaginatedResponse from a data array and total count */
 export function paginate<T>(items: T[], page: number, pageSize: number, total: number): PaginatedResponse<T> {
   return {
